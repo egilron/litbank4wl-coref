@@ -2,6 +2,7 @@
 */ 
 conll2jsonlines.py
 conll_transform.py
+jsonlines/*
 
 
 
@@ -134,3 +135,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+jsonlines/cache/27_far_from_the_madding_crowd_brat.json

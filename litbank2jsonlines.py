@@ -62,7 +62,7 @@ if not os.path.exists(dest_folder):
 source_filenames = [f for f in os.listdir(source_folder) if ".json" in f]
 
 wl_formatted = []
-for f_name in source_filenames:
+for idx, f_name in enumerate(source_filenames):
     with open (os.path.join(source_folder, f_name)) as rf:
         # assert len(rf.readlines()) == 1
         # print(f_name)
@@ -70,6 +70,7 @@ for f_name in source_filenames:
     wl_data = {"document_id": "nw"+doc["doc_key"], 
                 "cased_words" : [t for s in doc["sentences"] for t in s],
                 "sent_id" : [i for i, s in enumerate(doc["sentences"] )for t in s], 
+                "part_id" : idx ,
                 "speaker": [sp for s in doc["speakers"] for sp in s],
                 "head": [None for s in doc["sentences"] for t in s], # Change this to real head when possible
                 "clusters": []

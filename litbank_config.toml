@@ -5,7 +5,7 @@
 [DEFAULT]
 
 # The directory that contains extracted files of everything you've downloaded.
-data_dir = "data"
+data_dir = "litbank"
 
 # Train, dev and test jsonlines
 train_data = "litbank/litbank_train_head.jsonl"
