@@ -1,3 +1,10 @@
+# Ignore all subdirectories
+*/ 
+conll2jsonlines.py
+conll_transform.py
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
