@@ -10,10 +10,17 @@ You can now use these data for training:
 move into the wl-coref and run: 
 
 `python run.py train bert --config-file litbank_config.toml`
+`python run.py eval bert --config-file litbank_config.toml`
 
 
 
 
 ## Note
-- During experimenting, if you change the data in an input file, delete the pickle cahe files in wl-coref
+- During experimenting, if you change the data in an input file, delete the pickle cache files in wl-coref
 - The conversion does not add real Head - information. I think the last word in the span becomes the head. 
+- On Saga HPC I use saga-i3.sh after activating interactive shell on accel 
+
+## Eval:
+````
+test: | WL:  loss: 0.15565, f1: 0.57776, p: 0.62245, r: 0.53905 | SL:  sa: 0.97595, f1: 0.56883, p: 0.61636, r: 0.52810: 100% 15/15 [00:17<00:00,  1.18s/docs]
+```
