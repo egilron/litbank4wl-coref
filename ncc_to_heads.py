@@ -6,8 +6,8 @@ from typing import Tuple
 import jsonlines
 
 
-DATA_DIR = "wl-coref/wl-ncc"
-FILENAME = "ncc_{}{}.jsonl"
+DATA_DIR = "/cluster/work/users/egilron/ncc/wl-ncc/bokmaal"
+FILENAME = "bokmaal_{}{}.jsonl"
 LOGGING_LEVEL = logging.WARNING # WARNING  # DEBUG to output all duplicate spans
 SPLITS = ("development", "test", "train")
 

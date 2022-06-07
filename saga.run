@@ -25,4 +25,5 @@ python3 -m pip install jsonlines
 python3 -m pip install toml
 python3 -m pip install transformers==3.2.0
 
-python run.py train mbert --batch-size 12 --config-file ../ncc_train.toml
+
+python run.py train mbert --batch-size 2 --config-file ../ncc_train02.toml
