@@ -8,12 +8,12 @@
 data_dir = "/cluster/work/users/egilron/litbank4wl-coref/wl-coref/wl-ncc"
 
 # Train, dev and test jsonlines
-train_data = "/cluster/work/users/egilron/litbank4wl-coref/wl-coref/wl-ncc/ncc_train_head.jsonl"
+train_data = "/cluster/work/users/egilron/litbank4wl-coref/wl-coref/wl-ncc/ncc_development_head.jsonl"
 dev_data = "/cluster/work/users/egilron/litbank4wl-coref/wl-coref/wl-ncc/ncc_development_head.jsonl"
 test_data = "/cluster/work/users/egilron/litbank4wl-coref/wl-coref/wl-ncc/ncc_test_head.jsonl"
 
 # The device where everything is to be placed. "cuda:N"/"cpu" are supported.
-device = "cuda:0"
+device = "cpu"
 
 
 # Bert settings ======================
