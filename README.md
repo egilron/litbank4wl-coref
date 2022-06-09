@@ -12,7 +12,12 @@ move into the wl-coref and run:
 `python run.py train bert --config-file litbank_config.toml`
 `python run.py eval bert --config-file litbank_config.toml`
 
-
+## Thank you to litbank, wl-coref and corefconversion
+ ```
+ https://github.com/dbamman/litbank.git
+ https://github.com/vdobrovolskii/wl-coref.git
+ https://github.com/boberle/corefconversion
+``` 
 
 
 ## Note
