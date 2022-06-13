@@ -131,3 +131,9 @@ bert_finetune = false
 [mbert]
 bert_model = "bert-base-multilingual-cased"
 
+[xlmr]
+bert_model = "xlm-roberta-base"
+
+[norbert]
+bert_model = "ltgoslo/norbert2"
+

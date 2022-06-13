@@ -8,9 +8,9 @@
 data_dir = "data"
 
 # Train, dev and test jsonlines
-train_data = "wl-ncc/bokmaal/bokmaal_train_head.jsonl"
-dev_data = "wl-ncc/bokmaal/bokmaal_development_head.jsonl"
-test_data = "wl-ncc/bokmaal/bokmaal_test_head.jsonl"
+train_data = "/fp/homes01/u01/ec-egilron/ncc/wl-ncc_heads/wl-ncc_train_head.jsonl"
+dev_data = "/fp/homes01/u01/ec-egilron/ncc/wl-ncc_heads/wl-ncc_development_head.jsonl"
+test_data = "/fp/homes01/u01/ec-egilron/ncc/wl-ncc_heads/wl-ncc_test_head.jsonl"
 
 # The device where everything is to be placed. "cuda:N"/"cpu" are supported.
 device = "cuda:0"
@@ -130,4 +130,12 @@ bert_finetune = false
 
 [mbert]
 bert_model = "bert-base-multilingual-cased"
+
+[xlmr]
+bert_model = "xlm-roberta-base"
+train_epochs = 28
+dropout_rate = 0.6
+
+[norbert]
+bert_model = "ltgoslo/norbert2"
 
