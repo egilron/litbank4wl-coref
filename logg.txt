@@ -1,0 +1,29 @@
+python run.py train mbert --config-file "/home/egil/gits/litbank4wl-coref/msi_train01_cpu.toml"
+
+bert_model = "bert-base-multilingual-cased"
+a_scoring_batch_size = 4
+bert_finetune = false
+max_span_len = 32
+rough_k = 20
+Epoch 20: nwbokmaal_spbm~20111209-404993 c_loss: 0.39575 s_loss: inf: 100% 36/36 [02:35<00:00,  4.32s/docs]             
+dev: | WL:  loss: 0.31731, f1: 0.36310, p: 0.73523, r: 0.24108 | SL:  sa: 0.93794, f1: 0.34405, p: 0.71334, r: 0.22670: 100% 36/36 [01:03<00:00,  1.75s/docs]
+---
+python run.py train mbert --config-file "/home/egil/gits/litbank4wl-coref/msi_train02_cpu.toml"
+bert_model = "bert-base-multilingual-cased"
+a_scoring_batch_size = 16
+bert_finetune = false
+max_span_len = 64
+rough_k = 20
+
+
+Epoch 20: nwbokmaal_spbm~20111209-404993 c_loss: 0.36652 s_loss: inf: 100% 36/36 [01:57<00:00,  3.27s/docs]             
+dev: | WL:  loss: 0.32557, f1: 0.35596, p: 0.76358, r: 0.23208 | SL:  sa: 0.93504, f1: 0.33224, p: 0.72643, r: 0.21537: 100% 36/36 [01:01<00:00,  1.71s/docs]
+
+-----
+python run.py train xlmr --config-file "/home/egil/gits/litbank4wl-coref/msi_train03_cpu.toml"
+[xlmr]
+bert_model = "xlm-roberta-base"
+bert_finetune = false
+Epoch 20: nwbokmaal_spbm~20111209-404993 c_loss: 0.37605 s_loss: inf: 100% 36/36 [03:03<00:00,  5.09s/docs]             
+dev: | WL:  loss: 0.31747, f1: 0.03620, p: 0.68301, r: 0.01859 | SL:  sa: 0.88462, f1: 0.03872, p: 0.68836, r: 0.01992: 100% 36/36 [01:17<00:00,  2.16s/docs]
+
