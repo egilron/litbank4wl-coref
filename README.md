@@ -1,8 +1,9 @@
 # Train WL-coref on Litbank data
-Not sofisticated, but it runs on my hardware.
+The aim is to create a model for coreference resolution, on the freely accessible litbank-data. The aim is just to see that it runs, before I try WL-coref on a Norwegian setup.
+
 - Get your virtual environment ready, e.g. through the rquirements.txt in wl-coref
-- Run setup.sh to clone the resources
-- Run `litbank2jsonlines.py`
+- Run `setup.sh` to clone the resources
+- Run `python litbank2jsonlines.py`
 - Run `python litbank_to_heads.py`
 
 This process has established the litbank folder with jsonlines data, and copied the config file litbank_config.toml into the wl-coref folder
@@ -23,6 +24,7 @@ move into the wl-coref and run:
 ## Note
 - During experimenting, if you change the data in an input file, delete the pickle cache files in wl-coref
 - The conversion does not add real Head - information. I think the last word in the span becomes the head. 
+- You can train on cpu, with `device = "cpu"` and  `bert_finetune = false`
 - On Saga HPC I use saga-i3.sh after activating interactive shell on accel 
 
 ## Eval:
